@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* class 대신 className 사용 */
+.react {
+  background: aqua;
+  color: black;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 16px;
+}
