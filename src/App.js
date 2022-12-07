@@ -2,10 +2,22 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import MyComponent from './MyComponent';
+import Counter from './Counter';
+import Say from './Say';
 import { Fragment } from 'react';
 
+// const App = () => {
+//   return (
+//     <MyComponent name="React" favoriteNumber={7}>
+//       리액트
+//     </MyComponent>
+//   );
+// };
+
+// export default App;
+
 const App = () => {
-  return <MyComponent />;
+  return <Say />;
 };
 
 export default App;
