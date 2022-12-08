@@ -1,10 +1,11 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import MyComponent from './MyComponent';
-import Counter from './Counter';
-import Say from './Say';
-import { Fragment } from 'react';
+// import MyComponent from './MyComponent';
+// import Counter from './Counter';
+// import Say from './Say';
+// import { Fragment } from 'react';
+import EventPractice from './EventPractice';
 
 // const App = () => {
 //   return (
@@ -17,7 +18,7 @@ import { Fragment } from 'react';
 // export default App;
 
 const App = () => {
-  return <Say />;
+  return <EventPractice />;
 };
 
 export default App;
