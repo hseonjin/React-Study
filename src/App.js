@@ -1,11 +1,13 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-// import MyComponent from './MyComponent';
-// import Counter from './Counter';
-// import Say from './Say';
-// import { Fragment } from 'react';
+import MyComponent from './MyComponent';
+import Counter from './Counter';
+import Say from './Say';
+import { Fragment } from 'react';
 import EventPractice from './EventPractice';
+import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
 
 // const App = () => {
 //   return (
@@ -17,9 +19,16 @@ import EventPractice from './EventPractice';
 
 // export default App;
 
-const App = () => {
-  return <EventPractice />;
-};
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
+        <button onClick={() => this.ScrollBox.scrollToBottom()}>bottom</button>
+      </div>
+    );
+  }
+}
 
 export default App;
 
