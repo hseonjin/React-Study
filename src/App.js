@@ -9,6 +9,7 @@ import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
 import IterationSample from './IterationSample';
 import ScrollBox from './ScrollBox';
+import CommentList from './practice/Comment/CommentList';
 
 // const App = () => {
 //   return (
@@ -22,7 +23,7 @@ import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
-    return <IterationSample />;
+    return <CommentList />;
   }
 }
 
