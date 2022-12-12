@@ -7,6 +7,7 @@ import Say from './Say';
 import { Fragment } from 'react';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
+import IterationSample from './IterationSample';
 import ScrollBox from './ScrollBox';
 
 // const App = () => {
@@ -21,12 +22,7 @@ import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>bottom</button>
-      </div>
-    );
+    return <IterationSample />;
   }
 }
 
