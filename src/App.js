@@ -10,6 +10,7 @@ import ValidationSample from './ValidationSample';
 import IterationSample from './IterationSample';
 import ScrollBox from './ScrollBox';
 import CommentList from './practice/Comment/CommentList';
+import LifeCycleSample from './LifeCycleSample';
 
 // const App = () => {
 //   return (
