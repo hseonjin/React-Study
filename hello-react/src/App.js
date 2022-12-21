@@ -12,23 +12,44 @@ import ScrollBox from './ScrollBox';
 import CommentList from './practice/Comment/CommentList';
 import LifeCycleSample from './LifeCycleSample';
 
-// const App = () => {
-//   return (
-//     <MyComponent name="React" favoriteNumber={7}>
-//       리액트
-//     </MyComponent>
-//   );
-// };
+// 라이프사이클
+// 랜덤색상 생성
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
-// export default App;
-
+// state 초깃값 설정
 class App extends Component {
+  state = {
+    color: '#000000',
+  };
+
+  // Click 임의메서드
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor(),
+    });
+  };
+
   render() {
-    return <CommentList />;
+    return (
+      <div>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <LifeCycleSample color={this.state.color} />
+      </div>
+    );
   }
 }
 
 export default App;
+
+// class App extends Component {
+//   render() {
+//     return <CommentList />;
+//   }
+// }
+
+// export default App;
 
 // -----------------------
 // 1-2장

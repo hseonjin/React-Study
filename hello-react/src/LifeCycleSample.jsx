@@ -12,11 +12,13 @@ class LifeCycleSample extends Component {
 
   myRef = null;
 
+  // mount_constructor
   constructor(props) {
     super(props);
     console.log('constructor');
   }
 
+  // mount_getDerivedStateFromProps
   // 부모에게서 받은 color 값을 state에 동기화
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps');
@@ -26,27 +28,32 @@ class LifeCycleSample extends Component {
     return null;
   }
 
+  // mount_componentDidMount
   componentDidMount() {
     console.log('componentDidMount');
   }
 
-  // state.number값 마지막 수가 4이면 리렌더링 취소
+  // update_shouldComponentUpdate
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
+    // 다음 state의 수의 마지막 자리가 4면 리렌더링 하지 않음
     return nextState.number % 10 !== 4;
   }
 
+  // unmount_componentWillUnmount() {
   componentWillUnmount() {
     console.log('componentWillUnmount');
   }
 
+  // 이벤트 임의메서드 생성
   handleClick = () => {
     this.setState({
       number: this.state.number + 1,
     });
   };
 
-  // dom 변화 직전의 색상 속성을 snapshot값으로 반환
+  // update_getSnapshotBeforeUpdate
+  // dom 변화 직전의 색상 속성을 snapshao 값으로 반환하여 componentDidUpdate에서 조회
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
@@ -55,11 +62,11 @@ class LifeCycleSample extends Component {
     return null;
   }
 
-  // 반환된 snapshot값을 조회
+  // update_componentDidUpdate
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('componentDidUpdate', prevProps, prevState);
     if (snapshot) {
-      console.log('업데이트되기 직전 색상: ', snapshot);
+      console.log('업데이트 직전 색상: ', snapshot);
     }
   }
 
