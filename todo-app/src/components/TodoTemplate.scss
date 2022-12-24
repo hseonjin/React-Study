@@ -1,0 +1,22 @@
+.TodoTemplate {
+    width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.app-title {
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    height: 4rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;  // 상하 가운데 정렬
+    justify-content: center; // 좌우 가운데 정렬
+}
+
+.content {
+    background-color: white;
+}

@@ -1,0 +1,7 @@
+// jsconfig.json을 통해 불러오려는 컴포넌트 파일이 열려 있지 않아도 자동완성 가능
+
+{
+    "compilerOptions": {
+        "target": "es2020"
+    }
+}
