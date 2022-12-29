@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import WithRouterSample from "./withRouterSample";
 
 const data = {
   kkomi: {
@@ -24,6 +25,7 @@ const Profile = ({ match }) => {
         {username}({profile.name})
       </h3>
       <p>{profile.description}</p>
+      <WithRouterSample />
     </div>
   );
 };
